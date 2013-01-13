@@ -1,7 +1,7 @@
 class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Controller
   routingKey: '<%= plural_name.downcase %>'
-<% actions = ['index', 'show', 'create', 'update', 'destroy'] if actions.nil? %>
-<% actions.each do |action| -%>
+<%- actions = ['index', 'show', 'create', 'update', 'destroy'] if actions.nil? -%>
+<%- actions.each do |action| -%>
   <% if action == 'index' %>
   index: ->
     <%= js_app_name %>.<%= singular_name.camelize %>.load (err,results) =>

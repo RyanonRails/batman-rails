@@ -3,7 +3,7 @@ class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Co
   
 <% actions = ['index', 'show', 'create', 'update', 'destroy'] if actions.nil? %>
 <% actions.each do |action| -%>
-  <% if action == 'index' %>
+  <% if action == 'index' -%>
   index: ->
     <%= js_app_name %>.<%= singular_name.camelize %>.load (err,results) =>
       @set '<%= plural_name.downcase %>', new Batman.Set(results...)
@@ -39,5 +39,5 @@ class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Co
   destroy: (params) ->
     <%= js_app_name %>.<%= plural_name.camelize %>.destroy
       
-  <% end %>    
+  <% end -%>    
 <% end -%>

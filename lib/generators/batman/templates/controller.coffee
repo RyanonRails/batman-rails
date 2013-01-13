@@ -36,7 +36,7 @@ class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Co
         @redirect '/<%= plural_name.downcase %>'
   <% elsif action == 'destroy' -%>
   destroy: (params) ->
-    <%= js_app_name %>.<%= plural_name.camelize %>.destroy
+    <%= js_app_name %>.<%= plural_name.camelize %>.destroy()
       
   <% end -%>    
 <% end -%>

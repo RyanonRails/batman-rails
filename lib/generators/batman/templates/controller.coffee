@@ -38,5 +38,5 @@ class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Co
   destroy: (params) ->
     <%= js_app_name %>.<%= plural_name.camelize %>.destroy
       
-  <% end -%>    
+  <%- end -%>    
 <% end -%>

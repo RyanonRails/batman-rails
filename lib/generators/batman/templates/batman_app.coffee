@@ -1,4 +1,5 @@
 window.<%= js_app_name %> = class <%= js_app_name %> extends Batman.App
+  Batman.ViewStore.prefix = 'assets/views'
 
   # @root 'controller#all'
   # @route '/controller/:id', 'controller#show', resource: 'model', action: 'show'

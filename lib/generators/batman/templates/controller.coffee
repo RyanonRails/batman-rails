@@ -22,11 +22,11 @@ class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Co
       else
         <%= js_app_name %>.set "flash.success", "<%= singular_name.camelize %> created successfully!"
         @redirect <%= js_app_name %>.get('routes.<%= singular_name.downcase %>.path')
-  <% elsif action == 'edit' %>
+  <% elsif action == 'edit' -%>
   edit: (params) ->
     @set '<%= singular_name.downcase %>', <%= js_app_name %>.<%= plural_name.camelize %>.find parseInt(params.id, 10), (err) ->
       throw err if err
-  <% elsif action == 'update' %>
+  <% elsif action == 'update' -%>
   update: (params) ->
     @get('<%= singular_name.downcase %>').save (err) =>
       if err
@@ -34,7 +34,7 @@ class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Co
       else
         <%= js_app_name %>.set "flash.success", "<%= singular_name.camelize %> updated successfully!"
         @redirect '/<%= plural_name.downcase %>'
-  <% elsif action == 'destroy' %>
+  <% elsif action == 'destroy' -%>
   destroy: (params) ->
     <%= js_app_name %>.<%= plural_name.camelize %>.destroy
       

@@ -11,7 +11,7 @@ module Batman
       def create_batman_controller
         with_app_name do
           template "views/index.html", "#{js_path}/views/#{plural_name.downcase}/index.html"
-          template "views/_model.html", "#{js_path}/views/#{singular_name.downcase}/_#{singular_name.downcase}.html"
+          template "views/_model.html", "#{js_path}/views/#{plural_name.downcase}/_#{singular_name.downcase}.html"
         end
       end
     end

@@ -12,6 +12,7 @@ module Batman
           generate "batman:model #{singular_model_name} --app_name #{app_name}"
           generate "batman:controller #{singular_model_name} index show create update destroy --app_name #{app_name}"
           generate "batman:helper #{singular_model_name}"
+          generate "batman:view #{singular_model_name}"
         end
       end
     end

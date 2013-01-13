@@ -2,7 +2,7 @@ class <%= js_app_name %>.<%= plural_name.camelize %>Controller extends Batman.Co
   routingKey: '<%= plural_name.downcase %>'
 <%- actions = ['index', 'new', 'show', 'create', 'edit', 'update', 'destroy'] if actions.nil? -%>
 <% actions.each do |action| -%>
-  <% if action == 'index' -%>
+  <%- if action == 'index' %>
   index: ->
     <%= js_app_name %>.<%= singular_name.camelize %>.load (err,results) =>
       @set '<%= plural_name.downcase %>', new Batman.Set(results...)

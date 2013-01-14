@@ -11,7 +11,7 @@ module Batman
 
       RESERVED_JS_WORDS = %w{
         break case catch continue debugger default delete do else finally for 
-        function if in instanceof new return switch this throw try typeof var void while with 
+        function if in instanceof return switch this throw try typeof var void while with 
       }
 
       def validate_no_reserved_words

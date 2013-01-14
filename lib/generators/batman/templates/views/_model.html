@@ -1,0 +1,3 @@
+<% attributes.each do |attribute| -%>
+  <span data-bind="<%= singular_name.downcase %>.<%= render_attribute(attribute) %>"></span>
+<% end -%>
